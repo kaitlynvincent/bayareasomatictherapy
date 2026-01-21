@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contact | Bay Area Somatic Therapy Center</title>
+  <meta name="description" content="Contact Bay Area Somatic Therapy Center to request a free 15-minute consultation, join a low-fee trauma group waitlist, or support our nonprofit mission." />
+  <link rel="canonical" href="https://bayareasomatictherapy.com/contact.html" />
+
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Bay Area Somatic Therapy Center logo" />
+          <div class="title">
+            <strong>Bay Area Somatic Therapy Center</strong>
+            <span>Nonprofit therapy & trauma-informed groups</span>
+          </div>
+        </a>
+
+        <div class="navlinks">
+          <a data-nav href="services.html">1:1 Therapy</a>
+          <a data-nav href="groups.html">Groups</a>
+          <a data-nav href="fees.html">Fees</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="faq.html">FAQ</a>
+          <a class="cta" href="contact.html">Get Started</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+
+      <div class="card" style="padding:22px">
+        <h1>Get started</h1>
+        <p>
+          We’re so glad you’re here. You’re welcome to reach out whether you’re looking for
+          <strong>sliding scale somatic therapy</strong>, an <strong>affordable CPTSD/trauma group</strong>,
+          or you’d like to <strong>support our nonprofit mission</strong>.
+        </p>
+
+        <div class="grid-3">
+          <div class="card feature">
+            <h3>Request a 15-minute consultation</h3>
+            <p>A brief call to explore fit, answer questions, and clarify next steps.</p>
+          </div>
+          <div class="card feature">
+            <h3>Join a group waitlist</h3>
+            <p>Low-fee group therapy for CPTSD/trauma survivors in SF and the Bay Area.</p>
+          </div>
+          <div class="card feature">
+            <h3>Support the mission</h3>
+            <p>Partner, donate, or help expand access to trauma-informed community care.</p>
+          </div>
+        </div>
+
+        <hr class="sep" />
+
+        <h2>Contact form</h2>
+        <p class="small">
+          Please complete the form below, and we’ll get back to you within <strong>1–2 business days</strong>.
+        </p>
+
+        <!-- Success message -->
+        <div id="form-success" class="card" style="display:none; padding:14px; background:rgba(255,255,255,.70); box-shadow:none; border:1px solid rgba(11,27,43,.14); margin-bottom:14px;">
+          <strong>Message received.</strong>
+          <p class="small" style="margin:6px 0 0;">
+            Thanks for reaching out. We’ll respond within 1–2 business days.
+          </p>
+        </div>
+
+        <!-- ✅ Formspree form -->
+        <form class="form" action="https://formspree.io/f/mpqqydja" method="POST">
+
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div>
+            <label for="pronouns">Pronouns (optional)</label>
+            <input
+              id="pronouns"
+              name="pronouns"
+              type="text"
+              placeholder="Examples: she/her, he/him, they/them"
+            />
+          </div>
+
+          <div>
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div>
+            <label for="interest">What are you reaching out about?</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select one…</option>
+              <option value="15-min consultation">Request a 15-minute consultation</option>
+              <option value="individual therapy">Sliding scale 1:1 therapy</option>
+              <option value="group therapy">Group therapy (waitlist)</option>
+              <option value="support mission">Support the mission / partnership</option>
+              <option value="general question">General question</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="availability">Your availability (optional)</label>
+            <input
+              id="availability"
+              name="availability"
+              type="text"
+              placeholder="Example: weekday mornings, Tue after 3pm, etc."
+            />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Share what you're looking for, your availability, and any questions you'd like us to answer."
+            ></textarea>
+          </div>
+
+          <!-- Helpful metadata -->
+          <input type="hidden" name="_subject" value="New message — Bay Area Somatic Therapy Center" />
+          <input type="hidden" name="_redirect" value="https://bayareasomatictherapy.com/contact.html?submitted=true" />
+
+          <button class="button primary" type="submit" style="border:none; cursor:pointer;">
+            Send message
+          </button>
+
+          <p class="small">
+            Prefer email? You can a
+
