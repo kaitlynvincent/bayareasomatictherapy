@@ -36,54 +36,7 @@ h3{font-size:1.12rem}
 .container{max-width:var(--max); margin:0 auto; padding:0 18px}
 .section{padding:64px 0}
 
-/* ---- Ocean hero background ---- */
-.ocean-hero{
-  position:relative;
-  overflow:hidden;
-  padding:0;
-  min-height: 760px;
-  display:flex;
-  align-items:flex-start;
-}
-
-.ocean-hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(1200px 700px at 30% 10%, rgba(42,111,151,.28), transparent 60%),
-    radial-gradient(900px 600px at 80% 25%, rgba(22,58,95,.22), transparent 55%),
-    linear-gradient(180deg, rgba(246,251,255,1), rgba(235,246,255,.85));
-  z-index:0;
-}
-
-.ocean-hero::after{
-  content:"";
-  position:absolute;
-  inset:-40px;
-  background-image: url("../assets/ocean.jpg");
-  background-size:cover;
-  background-position:center;
-  filter: blur(.6px);
-  opacity:.62;
-  z-index:0;
-}
-
-
-/* overlay tint for text readability */
-.ocean-overlay{
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    180deg,
-    rgba(246,251,255,.90),
-    rgba(246,251,255,.66),
-    rgba(246,251,255,.88)
-  );
-  z-index:1;
-}
-
-
+/* --- accessibility --- */
 .skip-link{
   position:absolute; left:-999px; top:0;
   background:white; padding:10px 14px; border-radius:12px;
@@ -91,20 +44,24 @@ h3{font-size:1.12rem}
 }
 .skip-link:focus{left:16px; top:16px; z-index:9999}
 
+/* --- header/nav --- */
 .header{
   position:sticky; top:0; z-index:1000;
   backdrop-filter: blur(14px);
   background: rgba(246,251,255,.72);
   border-bottom:1px solid var(--line);
 }
+
 .nav{
   display:flex; align-items:center; justify-content:space-between;
   padding:12px 0;
   gap:14px;
 }
+
 .brand{
   display:flex; align-items:center; gap:12px; text-decoration:none;
 }
+
 .brand img{width:44px; height:44px; object-fit:contain}
 .brand .title{display:flex; flex-direction:column}
 .brand .title strong{font-size:1rem; color:var(--ink)}
@@ -113,13 +70,16 @@ h3{font-size:1.12rem}
 .navlinks{
   display:flex; gap:14px; align-items:center; flex-wrap:wrap;
 }
+
 .navlinks a{
   text-decoration:none;
   padding:8px 10px;
   border-radius:14px;
   color:var(--muted);
 }
-.navlinks a:hover, .navlinks a[aria-current="page"]{
+
+.navlinks a:hover,
+.navlinks a[aria-current="page"]{
   background:rgba(22,58,95,.08);
   color:var(--ink);
 }
@@ -133,9 +93,10 @@ h3{font-size:1.12rem}
   text-decoration:none;
   font-weight:700;
 }
+
 .cta:hover{transform:translateY(-1px)}
 
-/* “glass” cards */
+/* --- cards --- */
 .card{
   background:var(--glass);
   border:1px solid var(--line);
@@ -143,10 +104,52 @@ h3{font-size:1.12rem}
   box-shadow:var(--shadow);
 }
 
+/* --- Ocean hero (mockup look) --- */
+.ocean-hero{
+  position:relative;
+  overflow:hidden;
+  padding:0;
+  min-height: 620px;              /* mockup height (less tall) */
+  display:flex;
+  align-items:flex-start;
+
+  border-radius: 28px;            /* mockup rounded container */
+  margin-top: 18px;
+  border: 1px solid rgba(11,27,43,.10);
+  box-shadow: 0 18px 38px rgba(11,27,43,.12);
+}
+
+/* main background photo */
+.ocean-hero::after{
+  content:"";
+  position:absolute;
+  inset:-40px;
+  background-image: url("../assets/ocean.jpg");
+  background-size:cover;
+  background-position:center;
+  filter: blur(.6px);
+  opacity:.70;
+  z-index:0;
+}
+
+/* overlay tint for text readability */
+.ocean-overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    180deg,
+    rgba(246,251,255,.92),
+    rgba(246,251,255,.62),
+    rgba(246,251,255,.92)
+  );
+  z-index:1;
+}
+
+/* hero content */
 .hero{
   position:relative;
   z-index:2;
-  padding:56px 0 40px;
+  padding:48px 0 34px;
 }
 
 .hero-center{
@@ -179,6 +182,7 @@ h3{font-size:1.12rem}
   margin-top:18px;
 }
 
+/* buttons */
 .button{
   display:inline-flex; align-items:center; justify-content:center;
   padding:12px 18px;
@@ -187,18 +191,24 @@ h3{font-size:1.12rem}
   font-weight:800;
   letter-spacing:.01em;
 }
+
 .button.primary{
   background: linear-gradient(180deg, var(--blue), var(--navy));
   color:white;
   border:1px solid rgba(0,0,0,.1);
 }
+
 .button.secondary{
   background: rgba(255,255,255,.78);
   color:var(--ink);
   border:1px solid var(--line);
 }
-.button.secondary:hover{background:rgba(255,255,255,.92)}
 
+.button.secondary:hover{
+  background:rgba(255,255,255,.92)
+}
+
+/* note box */
 .note{
   margin-top:26px;
   display:flex;
@@ -221,23 +231,28 @@ h3{font-size:1.12rem}
   border:1px solid rgba(42,111,151,.20);
 }
 
+/* grids */
 .grid-2{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:16px;
 }
+
 @media (max-width: 900px){
   .grid-2{grid-template-columns:1fr}
 }
 
 .grid-3{
-  display:grid; gap:14px;
+  display:grid;
+  gap:14px;
   grid-template-columns:repeat(3, 1fr);
 }
+
 @media (max-width: 900px){
   .grid-3{grid-template-columns:1fr}
 }
 
+/* features / sections */
 .feature{
   padding:18px;
   box-shadow:none;
@@ -258,22 +273,32 @@ h3{font-size:1.12rem}
 
 .small{font-size:.92rem; color:var(--muted)}
 
+hr.sep{
+  border:0;
+  border-top:1px solid var(--line);
+  margin:18px 0
+}
+
+/* footer */
 .footer{
   padding:36px 0;
   border-top:1px solid var(--line);
   background: rgba(246,251,255,.85);
 }
+
 .footer-grid{
   display:grid;
   grid-template-columns: 1.2fr .8fr;
   gap:16px;
 }
-@media (max-width: 900px){ .footer-grid{grid-template-columns:1fr} }
 
-hr.sep{border:0; border-top:1px solid var(--line); margin:18px 0}
+@media (max-width: 900px){
+  .footer-grid{grid-template-columns:1fr}
+}
 
 /* forms */
 .form{display:grid; gap:10px}
+
 input, textarea, select{
   width:100%;
   padding:12px 12px;
@@ -282,15 +307,11 @@ input, textarea, select{
   background: rgba(255,255,255,.86);
   font:inherit;
 }
+
 textarea{min-height:140px}
 label{font-weight:700}
 
-@media (max-width: 700px){
-  .facilitator-grid{
-    grid-template-columns: 1fr !important;
-  }
-}
-
+/* facilitator block */
 .facilitator-photo{
   width:160px;
   height:160px;
@@ -308,6 +329,7 @@ label{font-weight:700}
   text-align:left;
 }
 
+/* Mobile-friendly facilitator grid */
 @media (max-width: 720px){
   .facilitator-grid{
     grid-template-columns: 1fr !important;
@@ -326,9 +348,9 @@ label{font-weight:700}
   top:54%;
   transform:translate(-50%,-50%);
   width:min(560px, 72vw);
-  opacity:.13;                 /* <-- whisper subtle */
+  opacity:.13;
   filter: blur(.2px);
-  mix-blend-mode: soft-light;  /* <-- makes it melt into the water */
+  mix-blend-mode: soft-light;
   pointer-events:none;
   z-index:2;
 }
@@ -339,4 +361,3 @@ label{font-weight:700}
     opacity:.09;
   }
 }
-
